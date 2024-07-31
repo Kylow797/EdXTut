@@ -1,2 +1,2 @@
-# EdXTut
-Need to do this to pass EdX Git class
+# Fractals
+We love em, no matter shape, size or complexity!
