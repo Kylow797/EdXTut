@@ -12,13 +12,13 @@ x = x.to(device)
 y = y.to(device)
 
 z = torch.exp(-(x**2+y**2)/2.0)
-z2 = torch.sin(x+y)
-pzs = z*z2
+# z2 = torch.sin(x+y)
+# pzs = z*z2
 
 #plot 
 import matplotlib.pyplot as plt
 
-plt.imshow(pzs.cpu().numpy())
+plt.imshow(z.cpu().numpy())
 
 plt.tight_layout()
 plt.show()
