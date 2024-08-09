@@ -4,9 +4,9 @@ import matplotlib.pyplot as plt
 
 device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
 
-Y, X = np.mgrid[-2.0:2.0:0.005, -2.0:2.0:0.005]
+#Y, X = np.mgrid[-2.0:2.0:0.005, -2.0:2.0:0.005]
 #enhanced HD version
-#Y, X = np.mgrid[-0.3:0.3:0.0003, -1:0:0.0003]
+Y, X = np.mgrid[-0.3:0.3:0.0003, -1:0:0.0003]
 
 x = torch.Tensor(X)
 y = torch.Tensor(Y)
@@ -21,7 +21,6 @@ ns = ns.to(device)
 c = torch.tensor(complex(-0.123, 0.745), dtype=torch.cfloat)
 #Douady set
 for i in range(200):
-    #Compute thenew values of z + 1 = z + x
     zs_  = zs*zs + c 
     not_diverged = torch.abs(zs_)<4.0
     ns += not_diverged
